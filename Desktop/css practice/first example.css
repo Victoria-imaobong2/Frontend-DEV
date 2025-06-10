@@ -1,0 +1,34 @@
+body{
+
+    background-color: lightblue;
+}
+
+.Brandname{
+    font-family: Arial, Helvetica, sans-serif; font: 45px sans-serif;
+    border: 1px groove;
+    padding: 10px
+    border-color: azure;
+    color: blue;
+    
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: 81px sans-serif;
+    border: 5px solid green;
+}
+
+*{
+    
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.margin{
+    color:whitesmoke ;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px dotted green;
+    
+
+}
+.links{
+    padding-left:900px;
+}
