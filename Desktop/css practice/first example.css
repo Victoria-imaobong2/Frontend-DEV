@@ -1,19 +1,33 @@
 body{
 
-    background-color: lightblue;
+    background-color: rgb(247, 221, 239);
 }
-
+.parent {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.class {
+  display: inline-block;
+  
+  
+}
 .Brandname{
-    font-family: Arial, Helvetica, sans-serif; font: 45px sans-serif;
-    border: 1px groove;
-    padding: 10px
-    border-color: azure;
-    color: blue;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: rgb(0, 0, 0);
+     font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    
     
 }
 p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: 81px sans-serif;
-    border: 5px solid green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: 20px sans-serif;
+    
+    text-indent: 100px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+
 }
 
 *{
@@ -29,6 +43,118 @@ p{
     
 
 }
+#book{
+    border: 5px solid;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 30px;
+
+}
 .links{
-    padding-left:900px;
+    padding-left:1800px;
+    vertical-align: top;
+    text-shadow: 0px 0px 5px ;
+    margin: 5px;
+    font-size:large;
+}
+
+p.white{
+    white-space: nowrap;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 2px 2px 5px white;
+}
+
+p.wrap{
+    white-space: wrap;
+    text-shadow: 2px 2px 5px red;
+}
+
+h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+a:link{
+    
+    color: aliceblue;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:visited{
+    
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+    color: blue;
+    text-decoration: underline blue;
+}
+a:active{
+    background-color: green;
+}
+h1.services{
+    text-decoration: underline;
+}
+ol.ah{
+    background-color: palevioletred;
+    padding: 20px;
+}
+ol li{
+    background-color: pink;
+    color: darkred;
+    padding: 5px;
+   margin-right: 70px;
+    margin-left: 35px;
+}
+p.services, .service, .prices{
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.service{
+    border: 5px solid rgb(221, 89, 179);
+}
+h2{
+    font-style: italic;
+    text-decoration: underline;
+    
+}
+table, th, td{
+    border: 4px solid;
+    border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+    overflow-x: auto;
+}
+td{
+    font-size: 20px;
+    color: darkred;
+    background-color: rgb(255, 189, 211);
+    padding: 6px;
+    text-align: center;
+}
+th{
+    font-size: 60px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    width: 30px;
+    height: 20px;
+    background-color: ;
+
+
+}
+tr :hover{
+    background-color: blue;
+}
+footer{
+    border: 4px solid palevioletred;
+    border-radius: 12px;
+    margin: 3px;
+    padding: 7px;
 }
