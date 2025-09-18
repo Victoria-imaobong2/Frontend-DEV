@@ -1,0 +1,23 @@
+* {
+  background-color: bisque;
+}
+.flexy {
+  display: grid;
+  grid-template-rows: 100px 100px 300px;
+  grid-template-columns: 200px 200px 200px;
+  margin: 0px;
+  padding: 20px;
+  justify-items: ;
+}
+div {
+  margin: px;
+  border: 2px solid blue;
+  padding: 20px;
+}
+
+@font-face {
+  font-family: "chathurabold";
+  src: url("../font/chathura_bold_macroman/chachathura-bold-webfont.eot");
+  font-weight: normal;
+  font-style: normal;
+}
