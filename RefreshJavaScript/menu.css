@@ -1,0 +1,48 @@
+.row{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+
+}
+.row img{
+    width: 200px;
+    height: 200px;
+}
+.grid h1{
+    text-decoration: underline;
+    padding: 10px;
+    font-weight:bolder;
+    justify-self: center;
+    margin: 30px;
+}
+
+.gride{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px 10px 10px 10px;
+    row-gap: 50px;
+    column-gap: 10px;
+}
+
+.gride > div{
+    display: flexbox;
+    border: 1px solid black;
+    /*padding: 10px 10px 30px 10px;*/
+    width: 250px;
+    align-content: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.gride > div > img{
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    
+    
+}
+.order{
+    width: fit-content;
+    color: ;
+}
+
