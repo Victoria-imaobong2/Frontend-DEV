@@ -1,0 +1,21 @@
+IIFE can be invoked using 
+
+embedded & client-server data approach
+standalone database approach
+sql lite are used for android.
+sql derby can be used in android apps that are advanced
+
+h2 and derby 
+
+embeddeddatabase approach - advantage: It has very small footprints
+
+MySQLConnectors
+
+java database connector
+
+drive class is the pivotal class that connects what youre doing in the software with the database
+
+my-sql-connector -> the one that ends with jdbc-> driver
+
+since you aren't the one that developed MySQL,
+it doesn't concern you because the connector internally knows how to handle itself
