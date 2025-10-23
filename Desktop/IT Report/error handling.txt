@@ -1,4 +1,0 @@
-Try is used when you suspect that an issue or error might arise.
-Catch is used when try fails, that is when that suspicion actually comes to play and there is an exception or runtime error, it catches the specific problem and fixes it.
-Finally will always happen whether or not there is an error along the way, the outcome of the code does not affect it. It is like compulsorily cleaning a kitchen whether or not the meal being cooked(code) turns out well.
-With throw, you manually and intentionally cause a problem usually because a prerequisite is not met eg, throwing a new error when the user inputs a negative age because an age must be positive.
