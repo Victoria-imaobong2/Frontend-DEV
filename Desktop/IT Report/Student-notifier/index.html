@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Status Notifier</title>
-    <!-- Load Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
@@ -17,7 +17,7 @@
           0 4px 6px -2px rgba(0, 0, 0, 0.05);
       }
       .toggle-switch input:checked + .slider {
-        background-color: #10b981; /* green-500 */
+        background-color: #10b981; 
       }
       .toggle-switch input:checked + .slider:before {
         transform: translateX(100%);
@@ -28,14 +28,14 @@
     <div id="app-container" class="w-full max-w-2xl space-y-8">
       <header class="text-center">
         <h1 class="text-4xl font-extrabold text-indigo-700">
-          Class Attendance Notifier
+          School Class Attendance Notifier
         </h1>
         <p class="text-gray-500 mt-2">
           Real-time status updates for students and staff.
         </p>
       </header>
 
-      <!-- User Info and Status -->
+      
       <div
         class="bg-white p-4 rounded-xl shadow-md flex justify-between items-center text-sm"
       >
@@ -57,7 +57,7 @@
           id="status-indicator"
           class="p-4 rounded-lg flex items-center space-x-3 transition-all duration-500"
         >
-          <!-- Status icon/text injected here by JS -->
+          
           <p id="status-message" class="text-lg font-semibold text-white">
             Loading status...
           </p>
@@ -117,7 +117,7 @@
       </div>
     </div>
 
-    <!-- Notification Modal (Instead of alert()) -->
+    
     <div
       id="notification-modal"
       class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50"
@@ -138,7 +138,7 @@
       </div>
     </div>
 
-    <!-- Firebase SDK Imports -->
+    
     <script type="module">
       // --- JAVASCRIPT LOGIC (Simulates the external script.js file) ---
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
@@ -155,7 +155,7 @@
         onSnapshot,
       } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-      // --- Global Firebase Variables (Mandatory for Canvas Environment) ---
+      
       const appId =
         typeof __app_id !== "undefined" ? __app_id : "default-app-id";
       const firebaseConfig =
@@ -171,11 +171,11 @@
       let auth = null;
       let userId = "anon_loading";
 
-      // Firestore Path for Public, Real-time Status
+      
       const STATUS_COLLECTION = `artifacts/${appId}/public/data/class_status`;
       const STATUS_DOC_ID = "current_status";
 
-      // Helper to show custom modal messages
+      
       function showCustomModal(title, message, isError = true) {
         const modal = document.getElementById("notification-modal");
         document.getElementById("modal-title").textContent = title;
@@ -219,7 +219,7 @@
               document.getElementById("user-id-display").textContent = userId;
               console.log("User authenticated. UID:", userId);
 
-              // Start listening for status changes only after auth is ready
+              
               listenForStatusChanges();
             } else {
               userId = crypto.randomUUID(); // Fallback identifier
@@ -241,7 +241,7 @@
         }
       }
 
-      // --- 2. REAL-TIME STATUS LISTENER (STUDENT VIEW) ---
+      
       function listenForStatusChanges() {
         if (!db) return;
 
