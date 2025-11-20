@@ -1,187 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>restaurant</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
-      integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="resturant.css" />
-  </head>
-  <body>
-    <!--header section-->
-    <header>
+  <title>Tasty Relish | Home</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fffaf4;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      border-bottom: 2px solid #f2e6d9;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #d35400;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #444;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #d35400;
+    }
+
+    header .icons i {
+      margin: 0 8px;
+      font-size: 20px;
+      color: #d35400;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: url("./Assets/Images/noodle-with-chicken-bowl-side-view.jpg") center/cover no-repeat;
+      text-align: center;
+      padding: 200px 20px;
+      color: white;
+      background-blend-mode: overlay;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .hero .btn-order {
+      background-color: #d35400;
+      color: white;
+      border-radius: 30px;
+      padding: 12px 35px;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-order:hover {
+      background-color: #e67e22;
+    }
+
+    /* MENU */
+    .menu-title {
+      text-align: center;
+      margin: 80px 0 40px;
+      font-size: 40px;
+      color: #d35400;
+      font-weight: bold;
+    }
+
+    /* ABOUT */
+    .about {
+      background-color: #fff2e6;
+      padding: 60px 5%;
+    }
+
+    .about img {
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    #aboutUs p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 60px 5%;
+    }
+
+    .contact form input, 
+    .contact form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .contact input[type="submit"] {
+      background-color: #d35400;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .contact input[type="submit"]:hover {
+      background-color: #e67e22;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    footer .icons i {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #e67e22;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo"><i class="fa-solid fa-utensils"></i> TASTY RELISH</div>
+    <nav>
+      <a href="resturant.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="About.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html">Order Now</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-medium"></i>
+      <i class="fa-brands fa-tiktok"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>DELICIOUS MEALS THAT TASTE LIKE HOME</h1>
+    <p>Healthy, tasty and so satisfying...</p>
+    <a href="order.html" class="btn btn-order">Order Now</a>
+  </section>
+
+  <!-- MENU -->
+  <h1 class="menu-title">Our Tasty Menu</h1>
+
+  <div class="container pb-5">
+
+    <div class="row g-4 justify-content-center">
+
       
-        <div class="logo"><i class="fa-solid fa-utensils"></i>TASTY RELISH</div>
-        <nav>
-          <a href="resturant.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="About.html">About Us</a>
-          <a href="contact.html">Contact</a>
-          <a href="order.html">Order Now</a>
-        </nav>
-
-        <div class="icons">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-medium"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-instagram"></i>
-      </div>
-    </header>
-    <!--Hero Section-->
-    <div class="hero">
-      <h1 class="display-2 fw-bold text-uppercase">DELICIOUS MEALS THAT TASTE LIKE HOME</h1>
-      <p class="lead fst-italic">healthy, tasty and so satisfying.....</p>
-      <button class="order"  btn-danger btn-lg mt-3><a href="order.html">Order Now</a></button>
-    </div>
-    <div class="empty">
-      <h1>Our Tasty Menu</h1>
-    </div>
-    <!--Menu Section-->
-    <div class="container">
-    <div class="row justify-content-around">
-      <div class="col-4">
-        <img
-          src="./Assets/Images/d032289b-07f9-42be-8466-cb967feeb104.jpg"
-          alt="Egusi soup"
-          height="300px" width="300px"
-        />
-        <br />
-        <div class="letter">
-        <h4>Properly Made Egusi Soup with well spiced proteins</h4>
-        <br />
-        <h5>6000 naira</h5>
-        <br />
-        <h5>Egusi soup made with well washed hands</h5></div>
-        <hr />
-      </div>
-      <div class="col-4">
-        <img src="./Assets/Images/….jpg" alt="" height="300px" width="300px" />
-        <br />
-        <div class="letter">
-        <h3>Pizza that brings that italian delight</h3>
-        <br />
-        <h5>15,500 naira</h5>
-        <br />
-        <h5>In every bite, there is a blast of tasty delight.</h5>
-        </div>
-        <hr />
-      </div>
-      <div class="col-3">
-        <img
-          src="./Assets/Images/Stir Fry Spaghetti.jpg"
-          alt="Stir-fry Spaghetti"
-          height="300px" width="300px"
-        />
-        <br />
-        <div class="letter">
-        <h3>Stir Fried Spaghetti</h3>
-        <br />
-        <h5>6000 naira</h5>
-        <br />
-        <h5>A blast of locally sourced spices</h5></div>
-        <hr />
-      </div>
-      <div class= "col-1" id="next"><i class="fa-solid fa-circle-chevron-right"></i></div>
-    </div>
-    </div>
-    <div class="about">
-      <h1>About Us</h1>
-      <div class="row">
-        <div class="col-5">
-          <img src="./Assets/Images/noodle-with-chicken-bowl-side-view.jpg" alt="" width="700px" height="700px"  />
-        </div>
-        <div class="col-7" id="aboutUs">
-           <p>At <strong>Taste Relish</strong>, we believe food should be more than just a meal — it should
-      be an experience worth coming back for. That’s why we deliver
-      <strong>healthy, clean, and sumptuous meals</strong> crafted with love and care,
-      right here in Africa.</p>
-
-      <p><strong>Mission:</strong> To bring you <strong>fresh flavors, nutritious ingredients, 
-      and authentic African taste</strong> that keep you nourished and satisfied.</p>
-      <p>
-        Join the growing family of food lovers who count on us daily —
-      because at <strong>Taste Relish</strong>, your satisfaction is always on the menu.
-      </p>
-      <h3>For more inquiries, call Vee on 07039102053
-        <br>Delivery to different cities is available.
-      </h3>
-      <button class="order"><h2>Order Now</button>
+      <div class="col-md-4">
+        <div class="card shadow-lg" style="height: 500px;">
+          <img src="./Assets/Images/d032289b-07f9-42be-8466-cb967feeb104.jpg" style="height: 350px;" class="card-img-top" alt="Egusi">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Egusi Soup</h5>
+            <p class="card-text">Properly made with rich proteins and African spices.</p>
+            <h4 class="text-danger">₦6,000</h4>
+          </div>
         </div>
       </div>
+
+      <!-- Meal Card 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <img src="./Assets/1.jpg" style="height: 400px;" class="card-img-top" alt="Veggies">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Healthy Meals for everybody</h5>
+            <p class="card-text">Every bite is packed with authentic tasty delight.</p>
+            <h4 class="text-danger">₦15,500</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meal Card 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <img src="./Assets/Images/Stir Fry Spaghetti.jpg" class="card-img-top" alt="Spaghetti">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Stir Fry Spaghetti</h5>
+            <p class="card-text">Flavoured with locally sourced fresh spices.</p>
+            <h4 class="text-danger">₦6,000</h4>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <!--Contact-->
-    <div class="contact">
-      <h1>Contact Us</h1><br>
-      <div class="formm">
-      <form action="" method="post">
-        <label for="Name">First Name</label><br />
-        <input type="text" id="Name" name="name" placeholder="Name" />
+  <!-- ABOUT -->
+  <section class="about">
+    <h1 class="text-center mb-5" style="color:#d35400;">About Us</h1>
 
-        <label for="lastName">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastname"
-          placeholder="Last Name"
-        />
+    <div class="row align-items-center">
+      <div class="col-md-5">
+        <img src="./Assets/Images/noodle-with-chicken-bowl-side-view.jpg" alt="">
+      </div>
 
-        <label for="email">Email</label><br />
-        <input type="text" id="Email" name="Email" placeholder="Email" />
+      <div class="col-md-7" id="aboutUs">
+        <p>
+          At <strong>Tasty Relish</strong>, we believe food should be more than just a meal —  
+          it should be an experience worth coming back for.
+        </p>
+        <p>
+          Our mission is to serve <strong>fresh, nutritious, clean, and delicious meals</strong>  
+          prepared with authentic African flavors.
+        </p>
+        <p>
+          Join thousands of food lovers who enjoy the richness of our menu daily.
+        </p>
 
-        <label for="message">Your Message</label><br />
-        <input type="text" id="message" height="1000px" name="message" placeholder="optional" />
+        <h4>For more inquiries, call Vee: <strong>07039102053</strong> <br>
+        Delivery to different cities is available.</h4>
 
-        <label for="submit"></label><br />
-        <input type="submit" id="submit" name="submit" />
-      </form>
+        <a href="order.html" class="btn btn-order mt-3">Order Now</a>
       </div>
     </div>
-    <footer>
-      <div class="icons">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-medium"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-instagram"></i>
-      </div>
-      <div>&copy Tasty Relish. 2025</div>
-    </footer>
-  </body>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h1 class="text-center mb-4" style="color:#d35400;">Contact Us</h1>
+
+    <form action="mailto:solomonvictoria2023@gmail.com" method="post">
+      <input type="text" name="fname" placeholder="First Name">
+      <input type="text" name="lname" placeholder="Last Name">
+      <input type="email" name="email" placeholder="Email Address">
+      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="icons mb-2">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-medium"></i>
+      <i class="fa-brands fa-tiktok"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    <p>&copy; 2025 Tasty Relish. All Rights Reserved.</p>
+  </footer>
+
+</body>
 </html>

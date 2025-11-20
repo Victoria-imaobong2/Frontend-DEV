@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="start()">
     <script src="refi.js"></script>
+
+    <p>Click on the following buttons:</p>
+    <form>
+        <input type="text" name="t1" placeholder="Enter your name"><br>
+        <input type="text" name="age" placeholder="Enter your age"><br>
+        <input type="button" onclick="sayHello(t1.value, age.value)" value="Say Hello" />
+    </form>
+
+    <img name="img1" id="img1" onmouseover="mouseOver()" onmouseout="mouseOut()" src="Assets/AI.jpg" alt="An image to start with">
+
+    <div id="contains"></div>
+
+    <img src="1.jpg" name="1.jpg" onmouseover="stop()" onmouseout="start()" alt="">
 </body>
 </html>
