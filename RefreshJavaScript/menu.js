@@ -29,41 +29,42 @@ const products = [
     },
      {
         id: 5,
-        name: "Egusi Soup with Swallow",
+        name: "Grilled Chicken",
         price: 4500,
         description: "Rich and Creamy Egusi soup.",
-        imageurl: "./Assets/pottage.jpg"
+        imageurl: "./Assets/grilledChicken.jpg"
     },
      {
         id: 6,
-        name: "Egusi Soup with Swallow",
+        name: "Stirfry Spaghetti",
         price: 4500,
-        description: "Rich and Creamy Egusi soup.",
-        imageurl: "./Assets/images/egusi.jpg",
+        description: "Sizzling hot Stir fried spaghetti.",
+        imageurl: "./Assets/images/stir fry spaghetti.jpg",
         
     },
      {
         id: 7,
-        name: "Egusi Soup with Swallow",
+        name: "Pizza",
         price: 4500,
-        description: "Rich and Creamy Egusi soup.",
-        imageurl: "./Assets/images/egusi.jpg"
+        description: "Tasty Pizz with italian goodness.",
+        imageurl: "./Assets/images/pizza.jpg"
     },
      {
         id: 8,
-        name: "Yam Pottage",
+        name: "Moi Moi with eggs and fish",
         price: 3500,
-        description: "Rich and delicious yam pottage with pumpkin leaves.",
-        imageurl: "./Assets/pottage.jpg"
+        description: "Moi Moi with eggs and fish.",
+        imageurl: "./Assets/images/moimoi.jpg"
     }
 ];
 
-function renderProducts() {
+function renderProducts(productList) {
     const container = document.getElementById("product-container");
+    container.innerHTML = "";
 
     const fragment = document.createDocumentFragment();
 
-    products.forEach(product => {
+    productList.forEach(product => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
 
@@ -92,4 +93,29 @@ function renderProducts() {
     container.appendChild(fragment);
 }
 
-renderProducts();
+renderProducts(products);
+
+const searchBox = document.getElementById("searchBox");
+
+const handleSearch = debounce(function(){
+    const text = searchBox.value.toLowerCase();
+
+    const filtered = products.filter(product =>
+         product.name.toLowerCase().includes(text)
+    );
+
+    renderProducts(filtered);
+}, 400);
+
+searchBox.addEventListener("input", handleSearch);
+
+function debounce(func, delay){
+    let timeout;
+    return function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func.apply(this, arguments);
+         }, delay);
+        
+    }
+}
